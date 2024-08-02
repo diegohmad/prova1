@@ -67,20 +67,7 @@ Accept: application/json
 
 ###
 
-POST http://localhost:8080/rastreamentos
-Content-Type: application/json
-
-{
-    "pacote": {
-        "id": 2
-    },
-    "dataHora": "2024-07-30T12:34:56",
-    "status": "em trânsito",
-    "localizacao": "Centro de Distribuição"
-}
-###
-
-GET http://localhost:8080/rastreamentos/2
+GET http://localhost:8080/rastreamentos/1
 Accept: application/json
 
 ###
