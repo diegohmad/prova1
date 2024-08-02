@@ -1,0 +1,100 @@
+###
+GET http://localhost:8080/pacotes
+Accept: application/json
+
+###
+
+POST http://localhost:8080/pacotes
+Content-Type: application/json
+
+{
+    "iden": "123",
+    "destinatario": "John Doe",
+    "endereco": {
+        "rua": "Rua Exemplo",
+        "numero": "23",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "cep": "11111-444"
+    },
+    "status": "pendente"
+}
+###
+
+POST http://localhost:8080/pacotes
+Content-Type: application/json
+
+{
+    "iden": "456",
+    "destinatario": "John Doe",
+    "endereco": {
+        "rua": "Rua Exemplo",
+        "numero": "23",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "cep": "11111-444"
+    },
+    "status": "pendente"
+}
+###
+
+
+GET http://localhost:8080/pacotes
+Accept: application/json
+
+###
+
+PUT http://localhost:8080/pacotes/1
+Content-Type: application/json
+
+{
+    "iden": "1233",
+    "destinatario": "John Doe",
+    "endereco": {
+        "rua": "Rua Exemplo",
+        "numero": "123",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "cep": "12345-678"
+    },
+    "status": "em trânsito"
+}
+###
+
+DELETE http://localhost:8080/pacotes/123
+Accept: application/json
+
+###
+
+POST http://localhost:8080/rastreamentos
+Content-Type: application/json
+
+{
+    "pacoteId": "1233",
+    "dataHora": "2024-07-30T12:34:56",
+    "status": "em trânsito",
+    "localizacao": "Centro de Distribuição"
+}
+###
+
+GET http://localhost:8080/rastreamentos/1233
+Accept: application/json
+
+###
+
+GET http://localhost:8080/enderecos
+Accept: application/json
+
+###
+
+POST http://localhost:8080/enderecos
+Content-Type: application/json
+
+{
+    "rua": "Rua Nova",
+    "numero": "456",
+    "cidade": "Rio de Janeiro",
+    "estado": "RJ",
+    "cep": "98765-432"
+}
+###

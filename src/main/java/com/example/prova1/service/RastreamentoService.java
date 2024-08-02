@@ -7,6 +7,7 @@ import com.example.prova1.model.Rastreamento;
 import com.example.prova1.repository.RastreamentoRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class RastreamentoService {
@@ -18,8 +19,12 @@ public class RastreamentoService {
         return (List<Rastreamento>) rastreamentoRepository.findAll();
     }
 
-    public List<Rastreamento> findByPacoteId(String pacoteId) {
+    public List<Rastreamento> findByPacoteId(Long pacoteId) {
         return rastreamentoRepository.findByPacoteId(pacoteId);
+    }
+
+    public Optional<Rastreamento> findById(Long id) {
+        return rastreamentoRepository.findById(id);
     }
 
     public Rastreamento save(Rastreamento rastreamento) {

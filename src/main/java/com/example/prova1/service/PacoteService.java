@@ -19,15 +19,15 @@ public class PacoteService {
         return (List<Pacote>) pacoteRepository.findAll();
     }
 
-    public Optional<Pacote> findById(String id) {
-        return pacoteRepository.findById(id);
+    public Optional<Pacote> findById(Long iden) {
+        return pacoteRepository.findById(iden);
     }
 
     public Pacote save(Pacote pacote) {
         return pacoteRepository.save(pacote);
     }
 
-    public void deleteById(String id) {
+    public void deleteById(Long id) {
         pacoteRepository.deleteById(id);
     }
 }

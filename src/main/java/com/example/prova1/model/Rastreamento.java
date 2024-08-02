@@ -20,8 +20,8 @@ public class Rastreamento {
     private String localizacao;
 
     @ManyToOne
-    @JoinColumn(name = "pacote_id")
-    private Pacote pacote;
+    @JoinColumn(name = "pacote_id", referencedColumnName = "id")
+    private Pacote pacote;    
 
     public String getResumo() {
         return "Data/Hora: " + this.dataHora + ", Status: " + this.status + ", Localização: " + this.localizacao;

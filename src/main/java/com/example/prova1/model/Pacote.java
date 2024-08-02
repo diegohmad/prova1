@@ -10,7 +10,10 @@ import java.util.List;
 @Data
 public class Pacote {
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String iden;
 
     private String destinatario;
 
@@ -32,15 +35,14 @@ public class Pacote {
         rastreamento.setPacote(this);
         this.rastreamentos.add(rastreamento);
     }
-
     public String consultarInformacoes() {
         StringBuilder info = new StringBuilder();
-        info.append("ID: ").append(this.id)
+        info.append("ID: ").append(this.iden)
             .append("\nDestinatário: ").append(this.destinatario)
             .append("\nEndereço: ").append(this.endereco.getEnderecoCompleto())
             .append("\nStatus: ").append(this.status)
             .append("\nRastreamentos: \n");
-
+    
         for (Rastreamento rastreamento : this.rastreamentos) {
             info.append(rastreamento.getResumo()).append("\n");
         }

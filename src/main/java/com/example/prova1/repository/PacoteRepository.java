@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 import com.example.prova1.model.Pacote;
 
 @Repository
-public interface PacoteRepository extends CrudRepository<Pacote, String> {
+public interface PacoteRepository extends CrudRepository<Pacote, Long> {
 }

@@ -9,5 +9,5 @@ import com.example.prova1.model.Rastreamento;
 
 @Repository
 public interface RastreamentoRepository extends CrudRepository<Rastreamento, Long> {
-    List<Rastreamento> findByPacoteId(String pacoteId);
+    List<Rastreamento> findByPacoteId(Long pacoteId);
 }
