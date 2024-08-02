@@ -52,16 +52,17 @@ Content-Type: application/json
     "destinatario": "John Doe",
     "endereco": {
         "rua": "Rua Exemplo",
-        "numero": "123",
+        "numero": "23",
         "cidade": "São Paulo",
         "estado": "SP",
-        "cep": "12345-678"
+        "cep": "11111-444"
     },
-    "status": "em trânsito"
+    "status": "pendente"
 }
+
 ###
 
-DELETE http://localhost:8080/pacotes/123
+DELETE http://localhost:8080/pacotes/1
 Accept: application/json
 
 ###
@@ -70,14 +71,16 @@ POST http://localhost:8080/rastreamentos
 Content-Type: application/json
 
 {
-    "pacoteId": "1233",
+    "pacote": {
+        "id": 2
+    },
     "dataHora": "2024-07-30T12:34:56",
     "status": "em trânsito",
     "localizacao": "Centro de Distribuição"
 }
 ###
 
-GET http://localhost:8080/rastreamentos/1233
+GET http://localhost:8080/rastreamentos/2
 Accept: application/json
 
 ###
